@@ -2,7 +2,7 @@
 import { ethers } from "hardhat";
 
 async function main() {
-  const contractName = "Attempt";
+  const contractName = "Twitter";
   // const lockedAmount = ethers.utils.parseEther("0.001");
   const ContractFactory = await ethers.getContractFactory(contractName);
   // example of contract whit params (constructors + needs money)

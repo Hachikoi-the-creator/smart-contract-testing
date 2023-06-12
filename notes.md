@@ -11,6 +11,7 @@
   - [Contract call Contract func w/Call](#contract-call-contract-func-wcall)
   - [Create calldata](#create-calldata)
     - [What if the callback data doesn't matcha func?](#what-if-the-callback-data-doesnt-matcha-func)
+  - [Cannot use custome rrors in modifiers](#cannot-use-custome-rrors-in-modifiers)
 
 ## Get Contract balance
 
@@ -228,8 +229,13 @@ contract Hero {
 }
 ```
 
-```
+## Cannot use custome rrors in modifiers
 
+**This code inside a modifier will always fail**
+
+```c#
+if (msg.sender == owner) _;
+        revert UnauthorizedAccess("You are not the owner!");
 ```
 
 ```
